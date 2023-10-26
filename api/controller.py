@@ -24,14 +24,28 @@ class APIController(object):
 
     def post_answer(self, answer):
         response = requests.post(self.url(f'answer/{self._task_token}'), json={'answer': answer})
-        logging.debug(response.json())
+        logging.info(response.json())
+
+
+def get_task(task_name):
+    controller = APIController(task_name)
+    controller.get_task_token()
+    task_description = controller.get_task_description()
+    logging.info(task_description)
+    return task_description
+
+
+def check_task(task_name, resolve):
+    task_description = get_task(task_name)
+    answer = resolve(task_description)
+    logging.info(answer)
 
 
 def run_task(task_name, resolve):
     controller = APIController(task_name)
     controller.get_task_token()
     task_description = controller.get_task_description()
-    logging.debug(task_description)
+    logging.info(task_description)
     answer = resolve(task_description)
-    logging.debug(answer)
+    logging.info(answer)
     controller.post_answer(answer)

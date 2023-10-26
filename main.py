@@ -1,13 +1,24 @@
 import logging
+import os
 import sys
 
+import openai
 from dotenv import load_dotenv
 
-from api.controller import run_task
-from lessons.helloapi.exercise import resolve, task_name
+# from lessons.helloapi.exercise import resolve, task_name
+from lessons.moderation.exercise import resolve, task_name
 
 load_dotenv()
 
-logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
+openai.api_key = os.getenv('OPENAI_API_KEY')
+
+# from api.controller import get_task
+# get_task(task_name)
+
+# from api.controller import check_task
+# check_task(task_name, resolve)
+
+from api.controller import run_task
 run_task(task_name, resolve)
