@@ -7,4 +7,15 @@ def is_flagged(data):
 
 def moderate(text):
     moderate_response = openai.Moderation.create(input=text)
-    return is_flagged(moderate_response)
+    return moderate_response
+
+
+def chat_completion(system_message, user_message):
+    completion_response = openai.ChatCompletion.create(
+        model='gpt-3.5-turbo',
+        messages=[
+            {'role': 'system', 'content': system_message},
+            {'role': 'user', 'content': user_message},
+        ],
+    )
+    return completion_response.choices[0].message.content
