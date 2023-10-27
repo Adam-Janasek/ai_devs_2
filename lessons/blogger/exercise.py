@@ -3,7 +3,7 @@ from openapi.utils import chat_completion
 task_name = 'blogger'
 
 
-def resolve(payload):
+def resolve(payload, **kwargs):
     answers = []
     system_message = ' '.join([
       'Jestes pisarzem, ktory pisze blog.'
