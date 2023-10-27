@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 
 # from lessons.helloapi.exercise import resolve, task_name
 # from lessons.moderation.exercise import resolve, task_name
-from lessons.blogger.exercise import resolve, task_name
+# from lessons.blogger.exercise import resolve, task_name
+from lessons.liar.exercise import resolve, task_name
 
 load_dotenv()
 
