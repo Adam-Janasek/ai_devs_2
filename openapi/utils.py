@@ -19,3 +19,11 @@ def chat_completion(system_message, user_message):
         ],
     )
     return completion_response.choices[0].message.content
+
+
+def embedding(text):
+    embedding_response = openai.Embedding.create(
+        input=text,
+        model='text-embedding-ada-002',
+    )
+    return embedding_response['data'][0]['embedding']
