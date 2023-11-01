@@ -31,7 +31,7 @@ class APIController(object):
         logging.info(response.json())
 
 
-def get_task(task_name):
+def get_task(task_name, *args):
     controller = APIController(task_name)
     controller.get_task_token()
     task_description = controller.get_task_description()

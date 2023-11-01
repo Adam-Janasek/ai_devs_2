@@ -1,7 +1,5 @@
 from openapi.utils import moderate, is_flagged
 
-task_name = 'moderation'
-
 
 def resolve(payload, **kwargs):
     sentences = payload.get('input')
