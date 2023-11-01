@@ -9,7 +9,8 @@ from dotenv import load_dotenv
 # from lessons.moderation.exercise import resolve, task_name
 # from lessons.blogger.exercise import resolve, task_name
 # from lessons.liar.exercise import resolve, task_name
-from lessons.inprompt.exercise import resolve, task_name
+# from lessons.inprompt.exercise import resolve, task_name
+from lessons.embedding.exercise import resolve, task_name
 
 load_dotenv()
 
