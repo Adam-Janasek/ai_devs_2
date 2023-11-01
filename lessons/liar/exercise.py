@@ -1,7 +1,5 @@
 from openapi.utils import chat_completion
 
-task_name = 'liar'
-
 
 def resolve(payload, **kwargs):
     question = 'What is capital of Poland?'

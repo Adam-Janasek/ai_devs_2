@@ -1,7 +1,5 @@
 from openapi.utils import chat_completion
 
-task_name = 'blogger'
-
 
 def resolve(payload, **kwargs):
     answers = []

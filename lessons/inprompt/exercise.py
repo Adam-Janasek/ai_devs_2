@@ -1,7 +1,5 @@
 from openapi.utils import chat_completion
 
-task_name = 'inprompt'
-
 
 def resolve(payload, **kwargs):
     lesson_input = payload.get('input')
