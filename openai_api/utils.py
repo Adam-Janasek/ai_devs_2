@@ -27,3 +27,7 @@ def embedding(text):
         model='text-embedding-ada-002',
     )
     return embedding_response['data'][0]['embedding']
+
+
+def transcript(file):
+    return openai.Audio.transcribe('whisper-1', file)
