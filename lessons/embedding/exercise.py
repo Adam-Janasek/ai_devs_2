@@ -1,4 +1,4 @@
-from openapi.utils import chat_completion, embedding
+from openai_api.utils import chat_completion, embedding
 
 
 def resolve(payload, **kwargs):

@@ -1,4 +1,4 @@
-from openapi.utils import moderate, is_flagged
+from openai_api.utils import moderate, is_flagged
 
 
 def resolve(payload, **kwargs):
