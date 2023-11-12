@@ -11,7 +11,7 @@ def resolve(payload, **kwargs):
     name = chat_completion(system_message, question)
 
     info = ' '.join(list(filter(lambda phrase: name in phrase, lesson_input)))
-    print(info)
+
     system_message = ' '.join([
       f'You know this about {name}: {info}.'
       'Return answer for the given question in Polish language.',
