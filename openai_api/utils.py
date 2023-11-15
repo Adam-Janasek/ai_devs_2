@@ -10,9 +10,9 @@ def moderate(text):
     return moderate_response
 
 
-def chat_completion(system_message, user_message):
+def chat_completion(system_message, user_message, model='gpt-3.5-turbo'):
     completion_response = openai.ChatCompletion.create(
-        model='gpt-3.5-turbo',
+        model=model,
         messages=[
             {'role': 'system', 'content': system_message},
             {'role': 'user', 'content': user_message},
