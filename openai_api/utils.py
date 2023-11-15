@@ -21,6 +21,27 @@ def chat_completion(system_message, user_message):
     return completion_response.choices[0].message.content
 
 
+def image_recognize(user_message, img_url):
+    completion_response = openai.ChatCompletion.create(
+        model="gpt-4-vision-preview",
+        messages=[
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": user_message},
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": img_url,
+                        },
+                    },
+                ],
+            }
+        ],
+    )
+    return completion_response.choices[0].message.content
+
+
 def embedding(text):
     embedding_response = openai.Embedding.create(
         input=text,
