@@ -1,8 +1,3 @@
-# 'msg': 'Decide whether the task should be added to the ToDo list or to the calendar (if time is provided) and return the corresponding JSON',
-# 'hint': 'always use YYYY-MM-DD format for dates',
-# 'example for ToDo': 'Przypomnij mi, że mam kupić mleko = {"tool":"ToDo","desc":"Kup mleko" }',
-# 'example for Calendar': 'Jutro mam spotkanie z Marianem = {"tool":"Calendar","desc":"Spotkanie z Marianem","date":"2023-11-16"}',
-# 'question': 'W poniedziałek mam wizytę u lekarza'
 import datetime
 import json
 
